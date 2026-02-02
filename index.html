@@ -1,19 +1,50 @@
 <!doctype html>
 <html>
   <head>
-    <script type="text/javascript" charset="utf-8">
-      (function (g, e, n, es, ys) {
-        g['_genesysJs'] = e;
-        g[e] = g[e] || function () {
-          (g[e].q = g[e].q || []).push(arguments)
-        };
-        g[e].t = 1 * new Date();
-        g[e].c = es;
-        ys = document.createElement('script'); ys.async = 1; ys.src = n; ys.charset = 'utf-8'; document.head.appendChild(ys);
-      })(window, 'Genesys', 'https://apps.mypurecloud.com/genesys-bootstrap/genesys.min.js', {
-        environment: 'prod',
-        deploymentId: 'dbb12c5f-60d1-4c5a-b95c-f20739daf2f1'
-      });
+    <script src="https://app.five9.com/consoles/SocialWidget/five9-social-widget.min.js"></script>
+    <script>
+    var options = {
+            "rootUrl": "https://app.five9.com/consoles/",
+            "type": "chat",
+            "title": "Billing Support",
+            "tenant": "rocketgate",
+            "profiles": "Kodify Vixen",
+            "showProfiles": false,
+            "autostart": true,
+            "theme": "default-theme.css",
+            "surveyOptions": {
+                    "showComment": true,
+                    "requireComment": false
+            },
+            "fields": {
+                    "name": {
+                            "value": "",
+                            "show": true,
+                            "label": "Name"
+                    },
+                    "email": {
+                            "value": "",
+                            "show": true,
+                            "label": "Email"
+                    },
+                    "UserLocale": {
+                            "value": "en",
+                            "show": false
+                    }
+            },
+            "playSoundOnMessage": true,
+            "allowCustomerToControlSoundPlay": false,
+            "showEmailButton": true,
+            "hideDuringAfterHours": false,
+            "useBusinessHours": false,
+            "showPrintButton": false,
+            "allowUsabilityMenu": false,
+            "enableCallback": false,
+            "callbackList": "",
+            "allowRequestLiveAgent": false
+    };
+    Five9SocialWidget.addWidget(options);
+    
     </script>
   </head>
   <body>
